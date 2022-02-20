@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 19:50:31 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/02/19 19:47:16 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/02/20 18:09:53 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,16 @@ int main() {
 		while (checker_cmd(temp));
 		if (temp == "ADD")
 		{
+			if (i == 8)
+			{
+				i -= 1;				
+				book.changeContact();
+			}
 			std::cout << " nado proveritb na 8 \n";
 			book.adding(i++);
 		}
 		else if (temp == "SEARCH")
-		{
-			std::cout << "nado iscat\n";
 			book.search();
-		}
 		else if (temp == "EXIT")
 			break ;
 	}

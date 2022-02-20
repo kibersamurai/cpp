@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 19:52:54 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/02/19 19:48:35 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/02/20 12:18:44 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include <iomanip>
 
 class contact
 {
@@ -29,7 +30,7 @@ class contact
 		~contact();
 	
 		void adding(void);
-	
+		void print(int i);
 
 };
 	

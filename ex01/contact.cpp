@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 19:12:16 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/02/19 19:43:57 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/02/20 17:16:43 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,26 @@ void contact::adding(void)
 	std::cout << ">>>> Enter PHONE NUMBER: ";
 	if (!(std::getline(std::cin, this->phone_number)))
 		exit (1);
-	std::cout << ">>>> Enter DARKEST SEXRET: ";
+	std::cout << ">>>> Enter DARKEST SECRET: ";
 	if (!(std::getline(std::cin, this->darkest_secret)))
 		exit (1);
 	std::cout << "******* Contact added ******* \n";
+}
+
+void	contact::print(int i)
+{
+	std::cout << "|";
+	std::cout << std::setw(7) << i + 1 << "|";
+	if (this->first_name.length() < 11)
+		std::cout << std::setw(10) << this->first_name << "|";
+	else 
+		std::cout << this->first_name.substr(0,9) << ".|";
+	if (this->last_name.length() < 11)
+		std::cout << std::setw(10) << this->last_name << "|";
+	else 
+		std::cout << this->last_name.substr(0,9) << ".|";
+	if (this->nickname.length() < 11)
+		std::cout << std::setw(10) << this->nickname << "|" << std::endl;
+	else 
+		std::cout << this->nickname.substr(0,9) << ".|";
 }
