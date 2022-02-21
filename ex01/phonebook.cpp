@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 19:05:12 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/02/20 18:50:57 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/02/21 21:51:48 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,33 @@ void phonebook::adding(int i)
 	this->contacts[i].adding();
 }
 
+int phonebook::chooseIndex(void)
+{
+	std::string temp;
+	if (!(std::getline(std::cin, temp)))
+		exit (1);
+		std::cout << number << std::endl;
+	if (temp.length() == 1)
+	{
+		int i;
+		
+		i = 0;
+		
+		while ( i < this->number)
+		{
+			if (i == (temp[0] - '0') - 1)
+			{
+				this->contacts[i].getContact();
+				return 0;
+			}
+			i++;
+		}
+	}
+	else 
+		std::cout << "Index is wrong " << temp << std::endl;
+	return 1;
+}
+
 void phonebook::search(void)
 {
 	if (this->number == 0)
@@ -45,7 +72,11 @@ void phonebook::search(void)
 		this->contacts[i].print(i);
 		std::cout << "|*******|**********|**********|**********|\n";
 	}
-
+	do
+	{
+		std::cout << "Enter index of contact: ";
+	}
+	while (chooseIndex());
 }
 
 void phonebook::changeContact(void)

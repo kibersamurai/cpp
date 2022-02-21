@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 19:12:16 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/02/20 17:16:43 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/02/21 21:15:43 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,12 @@ void	contact::print(int i)
 		std::cout << std::setw(10) << this->nickname << "|" << std::endl;
 	else 
 		std::cout << this->nickname.substr(0,9) << ".|";
+}
+
+void contact::getContact(void) {
+	std::cout << "FIRST NAME is: " << this->first_name << std::endl;
+	std::cout << "LAST NAME is: " << this->last_name << std::endl;
+	std::cout << "NICKNAME is: " << this->nickname << std::endl;
+	std::cout << "Phone number is: " << this->phone_number << std::endl;
+	std::cout << "Darkest secret is: " << this->darkest_secret << std::endl;
 }

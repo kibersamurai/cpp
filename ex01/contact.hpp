@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 19:52:54 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/02/20 12:18:44 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/02/21 21:15:00 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class contact
 	
 		void adding(void);
 		void print(int i);
-
+		void getContact(void);
 };
 	
 #endif
