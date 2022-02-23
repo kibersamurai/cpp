@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 19:05:12 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/02/22 20:34:58 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/02/23 11:14:56 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ void phonebook::adding(int i)
 {
 	if (this->number != 8)
 		this->number++;
-	this->contacts[i].adding();
+	int n = 1;	
+	while (n)
+		n = this->contacts[i].adding();
 }
 
 int phonebook::chooseIndex(void)
