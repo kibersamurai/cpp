@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 19:05:12 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/02/21 21:51:48 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/02/22 20:34:58 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int phonebook::chooseIndex(void)
 	std::string temp;
 	if (!(std::getline(std::cin, temp)))
 		exit (1);
-		std::cout << number << std::endl;
 	if (temp.length() == 1)
 	{
 		int i;

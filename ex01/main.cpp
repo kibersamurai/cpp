@@ -6,21 +6,11 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 19:50:31 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/02/21 20:22:58 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/02/22 21:38:50 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.hpp"
-
-
-
-// contact::contact(/* args */)
-// {
-// }
-
-// contact::~contact()
-// {
-// }
 
 int checker_cmd(std::string temp)
 {

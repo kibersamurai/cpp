@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 19:12:16 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/02/21 21:15:43 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/02/22 21:32:45 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,45 @@ contact::~contact() {
 void contact::adding(void)
 {
 	std::cout << ">>>> Enter FIRST NAME: ";
-	if (!(std::getline(std::cin, this->first_name)))
+	if (!(std::getline(std::cin, this->first_name)))	
 		exit (1);
+	if (first_name.length() == 0)
+	{
+		std::cout << "A contact can’t have empty fields!!!\n";
+		return ;
+	}
 	std::cout << ">>>> Enter LAST NAME: ";
 	if (!(std::getline(std::cin, this->last_name)))
 		exit (1);
+	if (last_name.length() == 0)
+	{
+		std::cout << "A contact can’t have empty fields!!!\n";
+		return ;
+	}
 	std::cout << ">>>> Enter NICKNAME: ";
 	if (!(std::getline(std::cin, this->nickname)))
 		exit (1);
+	if (nickname.length() == 0)
+	{
+		std::cout << "A contact can’t have empty fields!!!\n";
+		return ;
+	}
 	std::cout << ">>>> Enter PHONE NUMBER: ";
 	if (!(std::getline(std::cin, this->phone_number)))
 		exit (1);
+	if (phone_number.length() == 0)
+	{
+		std::cout << "A contact can’t have empty fields!!!\n";
+		return ;
+	}
 	std::cout << ">>>> Enter DARKEST SECRET: ";
 	if (!(std::getline(std::cin, this->darkest_secret)))
 		exit (1);
+	if (darkest_secret.length() == 0)
+	{
+		std::cout << "A contact can’t have empty fields!!!\n";
+		return ;
+	}
 	std::cout << "******* Contact added ******* \n";
 }
 
