@@ -1,28 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/26 18:05:19 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/02/26 20:47:37 by bprovolo         ###   ########.fr       */
+/*   Created: 2022/02/26 20:12:45 by bprovolo          #+#    #+#             */
+/*   Updated: 2022/02/26 22:20:26 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main(void)
-{
-	std::cout << "First zombie, Vladimir\n";
-	Zombie vladimir("Vladimir");
-	vladimir.announce();
-	std::cout << "Second zombie, Dmitrii - STACK\n";
-	randomChump("Dmitrii");
-	
-	std::cout << "Third zombie, Sergei - HEAP\n";
-	Zombie *sergei = newZombie("Sergei");
-	sergei->announce();
+/* constructor */
 
-	delete sergei;
+Zombie::Zombie(std::string name) : name(name) 
+{
+	std::cout << "Zombie constructor called" << std::endl;
+}
+
+/* destructor */
+
+Zombie::~Zombie(void)
+{
+	std::cout << this->name << ": "
+	<< "destroy\n";
+}
+
+/* Zombies announce themselves as follows */
+
+void	Zombie::announce(void) const
+{
+	std::cout << this->name << ": "
+	<< "BraiiiiiiinnnzzzZ...\n";
+}
+
+void 	Zombie::setName(std::string name_)
+{
+	name=name_;
 }

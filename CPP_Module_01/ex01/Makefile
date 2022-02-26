@@ -6,15 +6,15 @@
 #    By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/13 13:36:35 by bprovolo          #+#    #+#              #
-#    Updated: 2022/02/26 20:34:24 by bprovolo         ###   ########.fr        #
+#    Updated: 2022/02/26 21:57:49 by bprovolo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	=	main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRCS	=	main.cpp Zombie.cpp ZombieHorde.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
-NAME	=	BraiiiiiiinnnzzzZ
+NAME	=	Moar_brainz
 
 CFLAGS	=	-Wall -Wextra -Werror
 

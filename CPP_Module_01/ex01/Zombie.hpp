@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/26 18:05:19 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/02/26 20:47:37 by bprovolo         ###   ########.fr       */
+/*   Created: 2022/02/26 18:10:12 by bprovolo          #+#    #+#             */
+/*   Updated: 2022/02/26 22:23:28 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-int main(void)
+# include <iostream>
+# include <iomanip>
+# include <string>
+
+class Zombie
 {
-	std::cout << "First zombie, Vladimir\n";
-	Zombie vladimir("Vladimir");
-	vladimir.announce();
-	std::cout << "Second zombie, Dmitrii - STACK\n";
-	randomChump("Dmitrii");
-	
-	std::cout << "Third zombie, Sergei - HEAP\n";
-	Zombie *sergei = newZombie("Sergei");
-	sergei->announce();
+	public:
+		Zombie(std::string name);
+		~Zombie(void);
+		void announce( void ) const;
+		void 	setName(std::string name);
+		
+	private:
+		std::string name;
+		
+};
 
-	delete sergei;
-}
+Zombie* zombieHorde( int N, std::string name );
+
+#endif
