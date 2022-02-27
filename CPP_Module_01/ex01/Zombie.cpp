@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 20:12:45 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/02/26 22:20:26 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/02/27 15:11:11 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,34 @@
 
 /* constructor */
 
-Zombie::Zombie(std::string name) : name(name) 
+Zombie::Zombie(std::string _name) : name(_name) 
 {
 	std::cout << "Zombie constructor called" << std::endl;
 }
+
+Zombie::Zombie() : name("untitled")
+{
+	
+}
+
 
 /* destructor */
 
 Zombie::~Zombie(void)
 {
-	std::cout << this->name << ": "
+	std::cout << "Zombie " << name << ": "
 	<< "destroy\n";
 }
 
 /* Zombies announce themselves as follows */
 
-void	Zombie::announce(void) const
+void	Zombie::announce(void)
 {
-	std::cout << this->name << ": "
+	std::cout << name << ": "
 	<< "BraiiiiiiinnnzzzZ...\n";
 }
 
-void 	Zombie::setName(std::string name_)
+void 	Zombie::setName(std::string _name)
 {
-	name=name_;
+	name=_name;
 }

@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 18:10:12 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/02/26 22:23:28 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/02/27 15:01:16 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,17 @@
 class Zombie
 {
 	public:
-		Zombie(std::string name);
+		Zombie();
+		Zombie(std::string _name);
 		~Zombie(void);
-		void announce( void ) const;
-		void 	setName(std::string name);
+		void announce( void );
+		void 	setName(std::string _name);
 		
 	private:
 		std::string name;
 		
 };
 
-Zombie* zombieHorde( int N, std::string name );
+Zombie* zombieHorde( int N, std::string _name );
 
 #endif
