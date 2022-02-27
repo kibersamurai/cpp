@@ -6,12 +6,11 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 16:58:43 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/02/27 18:34:20 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/02/27 19:48:02 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
-
 
 Weapon::Weapon(std::string type) : _type(type)
 {
