@@ -1,0 +1,6 @@
+Typical implementation holds member constants corresponding 
+to all values of fmtflags, iostate, openmode, and seekdir shown below, 
+member variables to maintain current precision, width, and formatting flags, the 
+exception mask, the buffer error state, a resizeable container holding the callbacks, 
+the currently imbued locale, 
+the private storage, and a static integer variable for xalloc().
