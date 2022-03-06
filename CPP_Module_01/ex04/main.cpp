@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 16:57:48 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/03/04 22:49:35 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/03/06 19:49:18 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int main(int ac, char **av)
 	
 	if (ac != 4)
 	{
-		std::cout << "FAIL\n";
+		std::cout << "Fail. Try to use 3 arguments\n";
 		return 1;
 	}
 	ifs.open(av[1]);
@@ -63,18 +63,17 @@ int main(int ac, char **av)
 		return 1;
 	}
 	std::string str;
-	getline(ifs, str);
-	while(str.size() > 0)
+	while(!ifs.eof())
 	{
-		if (!ifs.eof()) 
-		{
-			str = changeStr(str, av[2], av[3], 0);
-			ofs << str;
-		}
-		str.clear();
 		getline(ifs, str);
+		str = changeStr(str, av[2], av[3], 0);
+		ofs << str;
+		str.clear();
 		if (!ifs.eof())
 			ofs << "\n";
-	}	
+	}
+	ifs.close();
+	ofs.close();
+	delete temp;	
 	return 0;
 }
