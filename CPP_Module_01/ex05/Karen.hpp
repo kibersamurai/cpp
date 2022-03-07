@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 20:06:11 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/03/06 20:18:49 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/03/07 16:17:35 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,17 @@
 
 #include <iostream>
 
-class Karen {
-	
+class Karen
+{
 	private:
 		void debug( void );
 		void info( void );
 		void warning( void );
 		void error( void );
+		void defaultCase( void );
 
 	public:
-		void 
+		void complain(std::string level);
+};
+
+#endif

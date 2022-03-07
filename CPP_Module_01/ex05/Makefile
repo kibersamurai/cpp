@@ -6,11 +6,11 @@
 #    By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/13 13:36:35 by bprovolo          #+#    #+#              #
-#    Updated: 2022/03/06 19:53:27 by bprovolo         ###   ########.fr        #
+#    Updated: 2022/03/07 15:39:52 by bprovolo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	=	main.cpp
+SRCS	=	main.cpp Karen.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
