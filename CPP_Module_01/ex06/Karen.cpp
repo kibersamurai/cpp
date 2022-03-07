@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 15:07:55 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/03/07 17:03:32 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/03/07 17:14:15 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,13 @@ void Karen::complain(std::string level)
 	{
 		case 1:
 			this->debug();
-			break ;
 		case 2:
 			this->info();
-			break ;
 		case 3:
 			this->warning();
-			break ;
 		case 4:
 			this->error();
-			break ;
+		break ;
 		default:
 			this->defaultCase();		
 	}
@@ -75,5 +72,5 @@ void Karen::error( void )
 
 void Karen::defaultCase( void )
 {
-	std::cout << "Wrong command\n" ;
+	std::cout << "Probably complaining about insignificant problems\n" ;
 }

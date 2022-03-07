@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/27 19:49:03 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/03/07 17:41:08 by bprovolo         ###   ########.fr       */
+/*   Created: 2022/02/27 16:57:48 by bprovolo          #+#    #+#             */
+/*   Updated: 2022/03/07 15:09:32 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
-#include <iostream>
+#include "Karen.hpp"
 
-HumanA::HumanA(std::string name, Weapon& weapon): _name(name), _weapon(weapon)
+int main(int ac, char **av)
 {
-}
-
-
-HumanA::~HumanA()
-{
-}
-
-void	HumanA::attack(void)
-{
-	std::cout << _name << " attacks with their " << _weapon.getType()
-	<< std::endl;
-}
-
-void HumanA::setWeapon(Weapon& weapon)
-{
-	_weapon = weapon;
+	Karen karen = Karen();
+	if (ac != 2)
+	{
+		std::cout << "Wrong number of args!\n";
+		return 1;
+	}
+	karen.complain(av[1]);
+	return 0;
 }
