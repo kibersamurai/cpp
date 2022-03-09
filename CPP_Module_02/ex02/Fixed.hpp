@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 18:10:12 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/03/09 21:14:18 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/03/09 21:15:16 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define FIXED_HPP
 
 # include <iostream>
-#	include <cmath>
+# include <cmath>
 
 class Fixed
 {
