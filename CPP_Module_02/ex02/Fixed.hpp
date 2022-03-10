@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 18:10:12 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/03/09 21:15:16 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/03/10 21:20:07 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,23 @@ class Fixed
 		Fixed &	operator = (const Fixed &a);
 
 		~Fixed(void);
+
+		bool operator == (const Fixed &a) const;
+		bool operator != (const Fixed &a) const;
+		bool operator >= (const Fixed &a) const;
+		bool operator <= (const Fixed &a) const;
+		bool operator > (const Fixed &a) const;
+		bool operator < (const Fixed &a) const;
+
+		Fixed operator - (const Fixed &a) const;
+		Fixed operator + (const Fixed &a) const;
+		Fixed operator / (const Fixed &a) const;
+		Fixed operator * (const Fixed &a) const;
+
+		Fixed & operator ++ (void);
+		Fixed & operator -- (void);
+		Fixed operator ++ (int);
+		Fixed operator -- (int);
 		
 /* возвращает raw value of the fixed-point value. */
 		int getRawBits( void ) const;
@@ -42,6 +59,11 @@ class Fixed
 		float toFloat( void ) const;
 		int toInt( void ) const;
 		
+		static Fixed & max ( Fixed & s1, Fixed & s2);
+		static Fixed & min ( Fixed & s1, Fixed & s2);
+		static const Fixed & max (const Fixed & s1, const Fixed & s2);
+		static const Fixed & max (const Fixed & s1, const Fixed & s2);
+
 		
 	private:
 		int fixedPoint;

@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 23:25:55 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/03/09 21:15:07 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/03/10 22:01:57 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,11 @@ Fixed::Fixed(const float floatNum)
 {
 	std::cout << "Float constructor called\n";
 	this->fixedPoint = roundf(floatNum * (1 << this->fractBits));
+}
+
+const Fixed & Fixed::min (const Fixed & s1, const Fixed & s2)
+{
+	if (s1 < s2)
+		return s1;
+	return s2;
 }
