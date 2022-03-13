@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/18 19:52:54 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/02/23 11:09:06 by bprovolo         ###   ########.fr       */
+/*   Created: 2022/03/13 19:52:01 by bprovolo          #+#    #+#             */
+/*   Updated: 2022/03/13 20:19:04 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-# define CONTACT_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-# include <iostream>
-# include <string>
-# include <iomanip>
+#include "ClapTrap.hpp"
 
-class contact
+class ScavTrap : public ClapTrap
 {
-	private:
-		std::string first_name;
-		std::string last_name;
-		std::string nickname;
-		std::string phone_number;
-		std::string darkest_secret;
 	public:
-		contact(/* args */);
-		~contact();
-	
-		int adding(void);
-		void print(int i);
-		void getContact(void);
+		ScavTrap();
+		ScavTrap( std::string name);
+		~ScavTrap();
+		ScavTrap(const ScavTrap & src);
+		ScavTrap & operator= (const ScavTrap & src);
+
+		void guardGate();
+		void attack(const std::string& target);
+		
 };
-	
+
 #endif

@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 18:10:12 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/03/10 21:20:07 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/03/11 18:25:22 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ class Fixed
 		static Fixed & max ( Fixed & s1, Fixed & s2);
 		static Fixed & min ( Fixed & s1, Fixed & s2);
 		static const Fixed & max (const Fixed & s1, const Fixed & s2);
-		static const Fixed & max (const Fixed & s1, const Fixed & s2);
+		static const Fixed & min (const Fixed & s1, const Fixed & s2);
 
 		
 	private:

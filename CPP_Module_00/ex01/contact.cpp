@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 19:12:16 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/02/22 21:32:45 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/03/13 21:00:30 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,17 @@ contact::~contact() {
 	
 }
 
-void contact::adding(void)
+int contact::adding(void)
 {
 	std::cout << ">>>> Enter FIRST NAME: ";
+	// if (first_name.length() != 0)
+	// 	this->first_name = "          ";
 	if (!(std::getline(std::cin, this->first_name)))	
 		exit (1);
 	if (first_name.length() == 0)
 	{
 		std::cout << "A contact can’t have empty fields!!!\n";
-		return ;
+		return 1;
 	}
 	std::cout << ">>>> Enter LAST NAME: ";
 	if (!(std::getline(std::cin, this->last_name)))
@@ -36,7 +38,7 @@ void contact::adding(void)
 	if (last_name.length() == 0)
 	{
 		std::cout << "A contact can’t have empty fields!!!\n";
-		return ;
+		return 1;
 	}
 	std::cout << ">>>> Enter NICKNAME: ";
 	if (!(std::getline(std::cin, this->nickname)))
@@ -44,7 +46,7 @@ void contact::adding(void)
 	if (nickname.length() == 0)
 	{
 		std::cout << "A contact can’t have empty fields!!!\n";
-		return ;
+		return 1;
 	}
 	std::cout << ">>>> Enter PHONE NUMBER: ";
 	if (!(std::getline(std::cin, this->phone_number)))
@@ -52,7 +54,7 @@ void contact::adding(void)
 	if (phone_number.length() == 0)
 	{
 		std::cout << "A contact can’t have empty fields!!!\n";
-		return ;
+		return 1;
 	}
 	std::cout << ">>>> Enter DARKEST SECRET: ";
 	if (!(std::getline(std::cin, this->darkest_secret)))
@@ -60,9 +62,10 @@ void contact::adding(void)
 	if (darkest_secret.length() == 0)
 	{
 		std::cout << "A contact can’t have empty fields!!!\n";
-		return ;
+		return 1;
 	}
 	std::cout << "******* Contact added ******* \n";
+	return 0;
 }
 
 void	contact::print(int i)
