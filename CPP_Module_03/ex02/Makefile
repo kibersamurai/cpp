@@ -6,21 +6,21 @@
 #    By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/13 13:36:35 by bprovolo          #+#    #+#              #
-#    Updated: 2022/03/14 20:57:25 by bprovolo         ###   ########.fr        #
+#    Updated: 2022/03/15 21:07:15 by bprovolo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	=	main.cpp ClapTrap.cpp ScavTrap.cpp
+SRCS	=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
-NAME	=	scavTrap
+NAME	=	fragTrap
 
 CFLAGS	=	-Wall -Wextra -Werror
 
 CC		=	clang++
 
-INCL	=	ClapTrap.hpp ScavTrap.hpp
+INCL	=	ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 
 STD		=	-std=c++98
 
