@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 20:30:39 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/03/15 21:06:31 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/03/16 20:54:50 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,9 @@ FragTrap & FragTrap::operator= ( const FragTrap & src )
 
 void FragTrap::highFivesGuys(void)
 {
+	std::cout << std::endl;
     std::cout << this->_name << ": gives High Five!\n";
+	std::cout << std::endl;
 }
 
 void FragTrap::attack(std::string const & target) {

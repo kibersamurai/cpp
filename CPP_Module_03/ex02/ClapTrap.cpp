@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 16:10:42 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/03/14 21:17:41 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/03/16 18:51:13 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 ClapTrap::ClapTrap() : _name("Default"), hitPoint(10), energyPoint(10), attackDamage(0)
 {
-	std::cout << " Default constructor have been called\n";
+	std::cout << " ClapTrap Default constructor have been called\n";
 }
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << this->_name << " Destructor have been called\n";
+	std::cout << this->_name << " ClapTrap Destructor have been called\n";
 }
 
 ClapTrap::ClapTrap(const ClapTrap & src) 
 {
-	std::cout << " Copy constructor called\n";
+	std::cout << " ClapTrap Copy constructor called\n";
 	*this = src;
 }
 	
@@ -34,19 +34,19 @@ ClapTrap & ClapTrap::operator= ( const ClapTrap & src )
 	this->_name = src._name;
 	this->energyPoint = src.energyPoint;
 	this->attackDamage = src.attackDamage;
-	std::cout << this->_name << ": assignation operator have been called\n";
+	std::cout << this->_name << ": ClapTrap assignation operator have been called\n";
 	return *this;
 }
 
 ClapTrap::ClapTrap( std::string name, int point, int energ, int damag) : _name(name),  hitPoint(point), energyPoint(energ), attackDamage(damag)
 {
-	
+	std::cout << " ClapTrap constructor have been called  " << std::endl;
 }
 
 	
 ClapTrap::ClapTrap(std::string name)  : _name(name), hitPoint(10), energyPoint(10), attackDamage(0)
 {
-	std::cout << this->_name << ": constructor have been called\n";
+	std::cout << this->_name << ": ClapTrap constructor have been called\n";
 }
 
 void ClapTrap::attack(const std::string& target)
