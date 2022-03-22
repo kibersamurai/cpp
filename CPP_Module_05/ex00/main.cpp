@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 15:26:17 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/03/21 22:13:08 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/03/22 20:42:55 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,21 @@ int main()
 	{
 		std::cout << e.what() << std::endl;
 	}
-    return 0;
+
+
+std::cout << std::endl;
+Bureaucrat b("Tyler", 150);
+b.setGrade(151);
+
+std::cout << std::endl;
+
+Bureaucrat * norm = new Bureaucrat("Samurai", 1);
+std::cout << norm->getName()
+<< " grade: "
+<< norm->getGrade() << std::endl;
+
+norm->setGrade(0);
+
+	delete norm;
+  return 0;
 }
