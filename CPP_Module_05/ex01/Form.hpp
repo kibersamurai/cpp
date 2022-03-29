@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*   Form.hpp                                   	    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,28 +10,36 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_HPP
-# define BUREAUCRAT_HPP
+#ifndef Form_HPP
+# define Form_HPP
 # include <iostream>
+# include "Bureaucrat.hpp"
 
-class Bureaucrat {
+class Bureaucrat;
+
+class Form {
 	
 	private:
 		const std::string name;
-		int grade;
+		const int gradeSign;
+		const int gradeExec;
+		bool Signed;
 
 	public:
-		Bureaucrat (std::string _name, int _grade);
-		~Bureaucrat();
-		Bureaucrat();
+		Form (std::string _name, int _grade);
+		~Form();
+		Form();
+		Form (std::string _name, int grade1, int grade2);
 		
 		std::string getName (void) const;
-		int getGrade(void) const;
+		int getGradeSign(void) const;
 		void setGrade(int grade);
 
-		Bureaucrat & operator= ( const Bureaucrat & src );
-	    Bureaucrat& operator++();
-   		Bureaucrat& operator--();
+		void beSigned(const Bureaucrat & src);
+
+		Form & operator= ( const Form & src );
+	    Form& operator++();
+   		Form& operator--();
 			
 		class GradeTooLowException : public std::exception
 		{
@@ -47,6 +55,6 @@ class Bureaucrat {
 		};
 };
 
-std::ostream& operator << (std::ostream &out, const Bureaucrat &point);
+std::ostream& operator << (std::ostream &out, const Form &point);
 
 #endif
