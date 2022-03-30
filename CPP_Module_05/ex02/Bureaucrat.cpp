@@ -6,13 +6,14 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 20:57:31 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/03/30 20:58:28 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/03/30 21:09:19 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() {
+Bureaucrat::Bureaucrat() : name ("default"), grade(150)
+{
 }
 
 Bureaucrat::Bureaucrat (std::string _name, int _grade) : name(_name)
@@ -24,6 +25,11 @@ Bureaucrat::Bureaucrat (std::string _name, int _grade) : name(_name)
 		throw GradeTooHighException();
 	this->grade = _grade;
 	std::cout << name << " - created " << std::endl;
+}
+
+Bureaucrat::Bureaucrat( const Bureaucrat & src) : name (src.name)
+{
+	*this = src;
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw(){
@@ -95,6 +101,16 @@ void Bureaucrat::signForm( const Form & src)
         std::cout << this->name << " signs " << src.getName() << std::endl;
     else {
         std::cerr << this->name << " cannot sign " << src.getName() << " because ";
+        throw GradeTooLowException();
+	}
+}
+
+void Bureaucrat::executeForm( const Form & src)
+{
+	if (this->grade <= src.getGradeSign())
+        std::cout << this->name << " executes " << src.getName() << std::endl;
+    else {
+        std::cerr << this->name << " cannot execute " << src.getName() << " because ";
         throw GradeTooLowException();
 	}
 }

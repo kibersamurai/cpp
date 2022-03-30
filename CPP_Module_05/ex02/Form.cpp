@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 20:57:31 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/03/30 20:58:56 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/03/30 21:59:04 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,11 @@ const char* Form::GradeTooHighException::what() const throw(){
 
 const char* Form::GradeTooLowException::what() const throw(){
     return "Grade is to low";
+}
+
+const char* Form::FormIsNotSigned::what() const throw()
+{
+	return "Form is not signed yet!";
 }
 
 Form::~Form( void ) {
@@ -82,4 +87,9 @@ int Form::getGradeSign( void) const
 int Form::getGradeExecute( void) const 
 {
 	return this->gradeExec;
+}
+
+void Form::setIsSigned(bool status)
+{
+	this->Signed = status;
 }

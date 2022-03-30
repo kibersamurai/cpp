@@ -6,11 +6,11 @@
 #    By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/13 13:36:35 by bprovolo          #+#    #+#              #
-#    Updated: 2022/03/30 19:25:24 by bprovolo         ###   ########.fr        #
+#    Updated: 2022/03/30 21:03:39 by bprovolo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	=	main.cpp Bureaucrat.cpp Form.cpp
+SRCS	=	main.cpp Bureaucrat.cpp Form.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp PresidentialPardonForm.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 

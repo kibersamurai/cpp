@@ -35,6 +35,7 @@ class Form {
 		int getGradeSign(void) const;
     	int getGradeExecute() const;
 		bool getIsSign(void) const;
+		void setIsSigned(bool status);
 
 		void beSigned(const Bureaucrat & src);
 
@@ -53,6 +54,15 @@ class Form {
 			public:
 				 virtual const char* what() const throw(); 
 		};
+
+		class FormIsNotSigned : public std::exception
+		{
+			public:
+				virtual const char* what() const throw();
+		};
+
+		virtual void execute(Bureaucrat const & executor) const = 0;
+		virtual std::string getTarget(void) const = 0;
 };
 
 std::ostream& operator << (std::ostream &out, const Form &point);
