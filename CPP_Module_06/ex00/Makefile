@@ -6,30 +6,30 @@
 #    By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/13 13:36:35 by bprovolo          #+#    #+#              #
-#    Updated: 2022/03/20 17:46:05 by bprovolo         ###   ########.fr        #
+#    Updated: 2022/03/31 21:17:25 by bprovolo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	=	main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
+SRCS	=	main.cpp 
 
 OBJS	=	$(SRCS:.cpp=.o)
 
-NAME	=	ex00
+NAME	=	convert
 
 CFLAGS	=	-Wall -Wextra -Werror
 
-CC		=	clang++
+CC		=	c++
 
 STD		=	-std=c++98
 
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
-			$(CC) $(STD) $(OBJS) $(CFLAGS) -o $(NAME)
+			$(CC) $(STD) $(OBJS) $(CFLAGS) -o $(NAME) 
 
 %.o: %.cpp	
 			$(CC) $(STD) $(CFLAGS) -c $< -o $@
-
+ 
 clean:
 			${RM} ${OBJS}
 

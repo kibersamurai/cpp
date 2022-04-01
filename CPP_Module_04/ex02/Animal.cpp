@@ -6,7 +6,7 @@
 /*   By: bprovolo <bprovolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 12:23:30 by bprovolo          #+#    #+#             */
-/*   Updated: 2022/03/20 20:13:20 by bprovolo         ###   ########.fr       */
+/*   Updated: 2022/03/20 20:23:41 by bprovolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,16 @@ Animal::Animal(const Animal & src) : type(src.type)
 
 Animal & Animal::operator= ( const Animal & src )
 {
-    this->type = src.type;
 	std::cout << "Animal assignation operator have been called\n";
+	if (this != &src)
+		this->type = src.type;
 	return *this;
-}
-
-void Animal::makeSound()
-{
-	std::cout << "- [Animal sound]\n";
-}
-
-void Animal::setType(std::string type) {
-    this->type = type;
 }
 
 std::string Animal::getType() const {
     return (type);
+}
+
+void Animal::setType(std::string type) {
+    this->type = type;
 }
